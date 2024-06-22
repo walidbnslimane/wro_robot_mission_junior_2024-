@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RoboMission Junior Points Calculator</h1>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="redComplete">Lake or green element completely in a green park area :</label>
+                <select id="redComplete">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="redPartial">Red vegetable partly in the market area:</label>
+                <select id="redPartial">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="containere">
+                    <div class="form-groupe">
+                        <label for="redCompletee">Green starter set completely in a grey area of a house :</label>
+                        <select id="redCompletee">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="form-groupe">
+                        <label for="redPartiale">Green starter set partly in grey area of a house:</label>
+                        <select id="redPartiale">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <label>
+                        Additionally: Green starter set is inside the house and door closed:
+                        <select id="additionalPoints1">
+                            <option value="0">no</option>
+                            <option value="8">yes</option>
+                        </select>
+                    </label>
+                    <div class="form-group">
+                        <label for="eBike1">First E-Bike is completely inside the charging area A:</label>
+                        <select id="eBike1">
+                            <option value="0">no</option>
+                            <option value="7">yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eBike2">Second E-Bike is completely inside the charging area A:</label>
+                        <select id="eBike2">
+                            <option value="0">no</option>
+                            <option value="7">yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cableTouching">Cable is touching the charging area B:</label>
+                        <select id="cableTouching">
+                            <option value="0">no</option>
+                            <option value="5">yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cableComplete">Cable is completely in the charging area B:</label>
+                        <select id="cableComplete">
+                            <option value="0">no</option>
+                            <option value="11">yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="apartmentHouse1">First Apartment house is not damaged or moved:</label>
+                        <select id="apartmentHouse1">
+                            <option value="0">no</option>
+                            <option value="3">yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="apartmentHouse2">Second Apartment house is not damaged or moved:</label>
+                        <select id="apartmentHouse2">
+                            <option value="0">no</option>
+                            <option value="3">yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fence1">First Fence is not damaged or moved:</label>
+                        <select id="fence1">
+                            <option value="0">no</option>
+                            <option value="3">yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fence2">Second Fence is not damaged or moved:</label>
+                        <select id="fence2">
+                            <option value="0">no</option>
+                            <option value="3">yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fence3">Third Fence is not damaged or moved:</label>
+                        <select id="fence3">
+                            <option value="0">no</option>
+                            <option value="3">yes</option>
+                        </select>
+                    </div>
+            <button type="button" onclick="calculatePoints()">Calculate Total Points</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </form>
+        <div id="result">
+            <h2>Total Points: <span id="totalPoints">0</span> </h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WRO-Elementary-calculator-points</h1>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="lakePartial">Lake or green element partly in a green park area:</label>
+                <select id="lakePartial">
+                    <option value="0">0</option>
+                    <option value="4">1</option>
+                    <option value="8">2</option>
+                    <option value="12">3</option>
+                    <option value="16">4</option>
+                    <option value="20">5</option>
+                    <option value="24">6</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="lakeComplete">Lake or green element completely in a green park area:</label>
+                <select id="lakeComplete">
+                    <option value="0">0</option>
+                    <option value="8">1</option>
+                    <option value="16">2</option>
+                    <option value="24">3</option>
+                    <option value="32">4</option>
+                    <option value="40">5</option>
+                    <option value="48">6</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="greenStarterPartial">Green starter set partly in grey area of a house:</label>
+                <select id="greenStarterPartial">
+                    <option value="0">0</option>
+                    <option value="4">1</option>
+                    <option value="8">2</option>
+                    <option value="12">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="greenStarterComplete">Green starter set completely in a grey area of a house:</label>
+                <select id="greenStarterComplete">
+                    <option value="0">0</option>
+                    <option value="8">1</option>
+                    <option value="16">2</option>
+                    <option value="24">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="greenStarterDoorClosed">Green starter set is inside the house and door closed:</label>
+                <select id="greenStarterDoorClosed">
+                    <option value="0">no</option>
+                    <option value="8">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="eBike1">First E-Bike is completely inside the charging area A:</label>
+                <select id="eBike1">
+                    <option value="0">no</option>
+                    <option value="7">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="eBike2">Second E-Bike is completely inside the charging area A:</label>
+                <select id="eBike2">
+                    <option value="0">no</option>
+                    <option value="7">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cableTouching">Cable is touching the charging area B:</label>
+                <select id="cableTouching">
+                    <option value="0">no</option>
+                    <option value="5">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cableComplete">Cable is completely in the charging area B:</label>
+                <select id="cableComplete">
+                    <option value="0">no</option>
+                    <option value="11">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="apartmentHouse1">First Apartment house is not damaged or moved:</label>
+                <select id="apartmentHouse1">
+                    <option value="0">no</option>
+                    <option value="3">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="apartmentHouse2">Second Apartment house is not damaged or moved:</label>
+                <select id="apartmentHouse2">
+                    <option value="0">no</option>
+                    <option value="3">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fence1">First Fence is not damaged or moved:</label>
+                <select id="fence1">
+                    <option value="0">no</option>
+                    <option value="3">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fence2">Second Fence is not damaged or moved:</label>
+                <select id="fence2">
+                    <option value="0">no</option>
+                    <option value="3">yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fence3">Third Fence is not damaged or moved:</label>
+                <select id="fence3">
+                    <option value="0">no</option>
+                    <option value="3">yes</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculatePoints()">Calculate Total Points</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </form>
+        <div id="result">
+            <h2>Total Points: <span id="totalPoints">0</span> </h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> -->
