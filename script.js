@@ -30,6 +30,7 @@ function resetForm() {
   document.getElementById("cableTouching").value = "0"
   document.getElementById("cableComplete").value = "0"
   document.getElementById("apartmentHouse1").value = "0"
+  document.getElementById("apartmentHouse2").value = "0"
   document.getElementById("fence1").value = "0"
   document.getElementById("fence2").value = "0"
   document.getElementById("fence3").value = "0"
