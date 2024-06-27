@@ -30,7 +30,6 @@ function resetForm() {
   document.getElementById("cableTouching").value = "0"
   document.getElementById("cableComplete").value = "0"
   document.getElementById("apartmentHouse1").value = "0"
-  document.getElementById("apartmentHouse2").value = "0"
   document.getElementById("fence1").value = "0"
   document.getElementById("fence2").value = "0"
   document.getElementById("fence3").value = "0"
@@ -89,26 +88,31 @@ if (redCompletee === 2) {
 
 }
 
-// document.getElementById("yellowComplete").addEventListener("change", updateyellowPartialOptionse);
+document.getElementById("cableComplete").addEventListener("change", updatecableCompleteOptions);
 
-// function updateyellowPartialOptionse() {
-//   let yellowComplete = parseInt(document.getElementById("yellowComplete").value);
-//   let yellowPartial  = document.getElementById("yellowPartial");
+        function updatecableCompleteOptions() {
+            let cableTouching = document.getElementById("cableTouching");
+            let cableCompleteValue = parseInt(document.getElementById("cableComplete").value);
 
-//   if (yellowComplete === 0) {
-//     yellowPartial.innerHTML = "<option value='0'>0</option><option value='8'>1</option><option value='16'>2</option><option value='24'>3</option><option value='32'>4</option>";
-// } 
-//   if (yellowComplete === 1) {
-//     yellowPartial.innerHTML = "<option value='0'>0</option><option value='8'>1</option><option value='16'>2</option><option value='24'>3</option>";
-// } 
-// //   if (yellowComplete === 2) {
-// //   yellowPartial.innerHTML = "<option value='0'>0</option><option value='1'>1</option><option value='2'>2</option>";
-// // } 
-// //   if (yellowComplete === 3) {
-// //     yellowPartial.innerHTML = "<option value='0'>0</option><option value='1'>1</option>";
-// //   }
-// //   if (yellowComplete === 4) {
-// //     yellowPartial.innerHTML = "<option value='0'>0</option>";
-// // } 
+            if (cableCompleteValue === 0) {
+                cableTouching.innerHTML = "<option value='0'>no</option><option value='5'>yes</option>";
+            } else if (cableCompleteValue === 11) {
+                cableTouching.innerHTML = "<option value='0'>no</option>";
+            }
+        }
 
-// }
+        document.getElementById("cableTouching").addEventListener("change", updatecableTouchingOptions);
+
+        function updatecableTouchingOptions() {
+            let cableComplete = document.getElementById("cableComplete");
+            let cableTouchingValue = parseInt(document.getElementById("cableTouching").value);
+
+            if (cableTouchingValue === 0) {
+                cableComplete.innerHTML = "<option value='0'>no</option><option value='11'>yes</option>";
+            } else if (cableTouchingValue === 5) {
+                cableComplete.innerHTML = "<option value='0'>no</option>";
+            }
+        }
+
+
+
